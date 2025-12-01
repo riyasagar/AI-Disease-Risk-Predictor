@@ -6,13 +6,30 @@ This is a full-stack web application that allows users to get potential disease 
 
 ## ✨ Features
 
-* **Secure User Authentication:** Users can register for an account and log in securely. Passwords are encrypted using `bcrypt`.
-* **Session Management:** The application keeps users logged in as they navigate between pages using `express-session` with a MySQL store.
-* **Symptom-Based Prediction:** Logged-in users can select multiple symptoms from a list to get a disease prediction from the machine learning model.
-* **Personal Prediction History:** Every prediction is saved to the user's account, and they can view their history on a dedicated page.
-* **Account Management:** Users can view their account details (name, email) and securely change their password.
-* **RESTful API:** A clear separation between the frontend and backend, with API endpoints for handling predictions, history, and user data.
+### 🔐 Secure Authentication
+- User registration & login  
+- Password hashing using **bcrypt**  
+- Session management with MySQL-backed sessions  
 
+### 🩺 Machine Learning Disease Prediction
+- Users can choose multiple symptoms  
+- Symptoms are processed by a Python ML model  
+- Model predicts the most likely disease with high accuracy  
+
+### 📊 Prediction History
+- Every prediction is saved to the user's account  
+- Users can view all past predictions with timestamps  
+
+### 👤 Account Management
+- View profile details (name, email)  
+- Change password securely  
+
+### 🔁 REST API Architecture
+- Separate API endpoints for:
+  - Authentication  
+  - Prediction  
+  - History  
+  - Account operations  
 ---
 
 ## 🛠️ Tech Stack
@@ -117,8 +134,8 @@ The application should now be running at `http://localhost:3000`.
 
 ## 📖 Usage
 
-1.  **Register:** Navigate to the registration page and create a new account.
-2.  **Login:** Log in with your credentials.
-3.  **Predict:** Go to the "Predictor" page, select your symptoms, and click "Predict Disease".
-4.  **View History:** Go to the "History" page to see a list of your past predictions.
+1.  **Sign Up:** Create a new account.
+2.  **Login:** Authenticate using your email and password.
+3.  **Predict Disease:** Select your symptoms → click Predict Disease → view AI-generated results.
+4.  **View History:** Check all previous predictions made from your account.
 5.  **Manage Account:** Go to the "Account" page to view your details or change your password.

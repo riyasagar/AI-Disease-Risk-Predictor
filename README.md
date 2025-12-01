@@ -1,5 +1,4 @@
-# Disease Predictor Web Application
-
+# 🌡️ AI Disease Predictor Web Application
 This is a full-stack web application that allows users to get potential disease predictions based on their symptoms. The prediction is powered by a machine learning model trained on a comprehensive dataset. The application features secure user authentication, session management, and a personal history of past predictions.
 
 ---

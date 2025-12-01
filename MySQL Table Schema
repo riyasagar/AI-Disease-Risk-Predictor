@@ -1,0 +1,26 @@
+
+-- Make sure to create a database first, e.g., CREATE DATABASE disease_predictor;
+-- Then run the following queries.
+
+-- Table for storing user information
+CREATE TABLE `users` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(255) NOT NULL,
+  `email` VARCHAR(255) NOT NULL UNIQUE,
+  `password` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+-- Table for storing prediction history
+CREATE TABLE `predictions` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `user_id` INT NOT NULL,
+  `symptoms` TEXT NOT NULL,
+  `prediction` VARCHAR(255) NOT NULL,
+  `timestamp` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  FOREIGN KEY (`user_id`) REFERENCES `users`(`id`) ON DELETE CASCADE
+);
+
+-- The 'express-mysql-session' library will automatically create
+-- and manage the 'sessions' table for you.

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">Disease Predictor</div>
+        <div class="navbar-links">
+            <a href="/predictor">Predictor</a>
+            <a href="/history">History</a>
+            <a href="/account" class="active">Account</a>
+            <a href="/logout">Logout</a>
+        </div>
+    </nav>
+
+    <main class="dashboard-container">
+        <h1>My Account</h1>
+        <div class="account-details">
+            <p><strong>Name:</strong> <span id="user-name">Loading...</span></p>
+            <p><strong>Email:</strong> <span id="user-email">Loading...</span></p>
+        </div>
+
+        <div class="change-password-container">
+            <h2>Change Password</h2>
+            <form id="change-password-form">
+                <div class="form-group">
+                    <label for="current-password">Current Password</label>
+                    <input type="password" id="current-password" name="current-password" required>
+                </div>
+                <div class="form-group">
+                    <label for="new-password">New Password</label>
+                    <input type="password" id="new-password" name="new-password" placeholder="At least 8 characters" required>
+                </div>
+                 <div class="form-group">
+                    <label for="confirm-new-password">Confirm New Password</label>
+                    <input type="password" id="confirm-new-password" name="confirm-new-password" required>
+                </div>
+                <div id="form-message" class="form-message" style="display: none;"></div>
+                <button type="submit" class="btn">Update Password</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="/static/js/account.js"></script>
+</body>
+</html>

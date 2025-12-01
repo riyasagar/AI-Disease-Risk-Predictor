@@ -1,0 +1,16 @@
+{
+  "name": "disease-predictor-backend",
+  "version": "1.0.0",
+  "description": "Backend for the disease predictor application with MySQL.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "express-mysql-session": "^3.0.0",
+    "mysql2": "^3.6.5"
+  }
+}

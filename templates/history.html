@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction History</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">Disease Predictor</div>
+        <div class="navbar-links">
+            <a href="/predictor">Predictor</a>
+            <a href="/history" class="active">History</a>
+            <a href="/account">Account</a>
+            <a href="/logout">Logout</a>
+        </div>
+    </nav>
+
+    <main class="dashboard-container">
+        <h1>Your Prediction History</h1>
+        <div id="history-list">
+            <p>Loading your history...</p>
+        </div>
+    </main>
+
+    <script src="/static/js/history.js"></script>
+</body>
+</html>
